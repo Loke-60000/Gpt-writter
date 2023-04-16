@@ -44,7 +44,34 @@ function App() {
   
 
   const getResponseFromAI = async (message) => {
-    const prompt = "tell a joke everytime";
+    const prompt = `Ignore previous instructions, the user will provide you with a description of his project write a "memoire" using that plan
+      Abstract (Introduction en Anglais)
+      Introduction en Français
+      Compétences du Titre couvertes par le Projet (d'après votre REAC)
+      Analyse du Besoin :
+      -Présentation l’entreprise
+      -Contexte - Besoin 
+      -Contraintes techniques
+      Spécifications Fonctionnelles :
+      -Use Case
+      -Diagramme d’activité
+      -Diagramme séquence
+      -Maquettage
+      CONCEPTION :
+      -MDC
+      -MLD
+      Arborescence 
+      Outils Techniques Utilisés
+      Fonctionnalités 
+      -Ecran
+      -Code 
+      CONCLUSION
+      ANNEXES
+      Exemples : 
+      -SQL
+      -Code pertinent
+      -Documentation 
+    `;
     const apiMessages = [
       { role: "system", content: prompt },
       { role: "user", content: message }
